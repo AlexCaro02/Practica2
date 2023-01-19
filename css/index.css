@@ -27,16 +27,19 @@ body {
     perspective: 1000px;
     transition: all 1.3s ease-in;
     transform: perspective(10000px) rotateX(0deg);
-    .text {
-      opacity: 1;
-    }
-    & > div {
-      opacity: 1;
-      transition-delay: 0s;
-    }
-    .explainer {
-      opacity: 0;
-    }
+  }
+
+  .contenido:hover > div {
+    opacity: 1;
+    transition-delay: 0s;
+  }
+
+  .contenido:hover .text {
+    opacity: 1;
+  }
+
+  .contenido:hover .explainer {
+    opacity: 0;
   }
 
   .izquierda, .centro, .derecha {
@@ -57,10 +60,22 @@ body {
     cursor: pointer;
     background-blend-mode: color-burn;
     
-    &:hover {
-      box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+
+  }
+
+  .izquierda :hover {
+    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
     background-color: #ccf;
-    }
+  }
+
+  .derecha :hover {
+    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+    background-color: #ccf;
+  }
+
+  .centro :hover {
+    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+    background-color: #ccf;
   }
 
   .texto {
