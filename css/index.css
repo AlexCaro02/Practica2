@@ -1,121 +1,133 @@
 body {
-    font-family: 'Raleway', sans-serif;
-    background-image: radial-gradient(circle at center, #899Dc4, #495D84);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
-    font-weight: 300;
-  }
+  font-family: 'Raleway', sans-serif;
+  background-image: radial-gradient(circle at center, #899Dc4, #495D84);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+  font-weight: 300;
+}
+.contenido {
+  display: flex;
+  perspective: 10px;
+  transform: perspective(300px) rotateX(20deg);
+  will-change: perspective;
+  perspective-origin: center center;
+  transition: all 1.3s ease-out;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+.contenido:hover {
+  perspective: 1000px;
+  transition: all 1.3s ease-in;
+  transform: perspective(10000px) rotateX(0deg);
+}
 
-  .contenido {
-    display: flex;
-    perspective: 10px;
-    transform: perspective(300px) rotateX(20deg);
-    will-change: perspective;
-    perspective-origin: center center;
-    transition: all 1.3s ease-out;
-    justify-content: center;
-    transform-style: preserve-3d;
-  }
+.contenido:hover .text{
+  opacity: 1;
+}
 
-  .contenido:hover {
-    perspective: 1000px;
-    transition: all 1.3s ease-in;
-    transform: perspective(10000px) rotateX(0deg);
-  }
+.contenido:hover > div{
+  opacity: 1;
+  transition-delay: 0s;
+}
 
-  .contenido:hover > div {
-    opacity: 1;
-    transition-delay: 0s;
-  }
+.contenido:hover .explainer{
+  opacity: 0;
+}
 
-  .contenido:hover .text {
-    opacity: 1;
-  }
+.left, .center, .right, .lefter, .righter {
+  width: 200px;
+  height: 150px;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+  opacity: 0;
+  transition: all .3s ease;
+  transition-delay: 1s;
+  position: relative;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #58d;
+  cursor: pointer;
+  background-blend-mode: color-burn;
+}
 
-  .contenido:hover .explainer {
-    opacity: 0;
-  }
+.lefter:hover{
+  box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+  background-color: #ccf;
+}
 
-  .izquierda, .centro, .derecha {
-    width: 200px;
-    height: 150px;
-    transform-style: preserve-3d;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
-    opacity: 0;
-    transition: all .3s ease;
-    transition-delay: 1s;
-    position: relative;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #58d;
-    cursor: pointer;
-    background-blend-mode: color-burn;
-    
+.left:hover{
+  box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+  background-color: #ccf;
+}
 
-  }
+.center:hover{
+  box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+  background-color: #ccf;
+}
 
-  .izquierda :hover {
-    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
-    background-color: #ccf;
-  }
+.right:hover{
+  box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+  background-color: #ccf;
+}
 
-  .derecha :hover {
-    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
-    background-color: #ccf;
-  }
+.righter:hover{
+  box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+  background-color: #ccf;
+}
 
-  .centro :hover {
-    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
-    background-color: #ccf;
-  }
-
-  .texto {
-    transform: translateY(30px);
-    opacity: 0;
-    transition: all .3s ease;
-    bottom: 0;
-    left: 5px;
-    position: absolute;
-    will-change: transform;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(100, 100, 255, .6)
-  }
-
-  .izquierda {
-    transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/creative_draw-512.png);
-  }
-  .centro {
-    opacity: 1;
-    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/app_window-512.png);
-  }
-  .derecha {
-    transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/cloud_weather-512.png);
-  }
+.text {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all .3s ease;
+  bottom: 0;
+  left: 5px;
+  position: absolute;
+  will-change: transform;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(100, 100, 255, .6)
+}
+.lefter {
+  transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+  background-image: url(data:image/png;base64,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);
+}
+.left {
+  transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+  background-image: url(https://cdn-icons-png.flaticon.com/512/686/686589.png);
+}
+.center {
+  opacity: 1;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/25/25231.png);
+}
+.right {
+  transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+  background-image: url(https://cdn-icons-png.flaticon.com/512/2519/2519334.png);
+}
+.righter {
+  transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+  background-image: url(https://cdn-icons-png.flaticon.com/512/5968/5968667.png);
+}
+.explainer {
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+  transition: all .6s ease;
+  width: 100%;
+  height: 100%;
+  background-color: #303050;
+  background-image: radial-gradient(circle at center top, #cce, #33a);
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, .8);
   
-  .explainer {
-    font-weight: 300;
-    font-size: 2rem;
-    color: #fff;
-    transition: all .6s ease;
-    width: 100%;
-    height: 100%;
-    background-color: #303050;
-    background-image: radial-gradient(circle at center top, #cce, #33a);
-    border-radius: 10px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
