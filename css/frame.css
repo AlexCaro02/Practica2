@@ -30,17 +30,9 @@ header{
     justify-content: space-around;
 }
 
-span{
-    color: white;
-    padding-left: 1%;
-    padding-bottom: 3%;
-    size: 10%;
-}
-
 .img1{
     max-width: 5%;
     max-height: 5%;
-
 }
 
 nav{
@@ -55,10 +47,6 @@ nav ul{
 
 nav ul li{
     float:left;
-}
-
-nav ul li:last-child{
-    padding-right:0px;
 }
 
 nav ul li a{
@@ -126,4 +114,26 @@ section{max-width:95%;}
     @media only screen and (max-width: 480px) {
         section {max-width: 90%;}
     }
+}
+
+/*fuera del nav: */
+
+h1{
+    text-align: center;
+    border-style: solid; 
+    border-color:#000000; 
+    border-radius: 100px; 
+    border-width: 5px;
+    background-color:#b8dbf1;
+    padding-bottom: 5px;
+    padding-top:5px;
+}
+
+.contenido .superior{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    /*gap: 1000px;*/
+    
 }
