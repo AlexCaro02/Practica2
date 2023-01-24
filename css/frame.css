@@ -138,6 +138,7 @@ article{
 }
 
 .todo .texto{
+    text-align: center;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -153,6 +154,12 @@ article{
     padding-bottom: 10px;
     padding-right: 10px;
 }
+.img2:hover{
+    border-style:solid;
+    border-color: gray;
+    transform: translate(-15px, 0px);
+    transition: transform 1.0s ease-in;
+}
 
 .footer{ 
     height: 50px; 
@@ -166,4 +173,92 @@ article{
     text-align: center;
     padding: 13px;
     color: white;
+}
+.seccion2{
+    text-align: justify;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.seccion3{
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.img3{
+    width: 500px;
+    height: 450px;
+    border-radius: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.img3:hover{
+    border-style:solid;
+    border-color: gray;
+    transform: translate(15px, 0px);
+    transition: transform 1.0s ease-in;
+}
+
+.flecha li{padding: .2em 0 .2em 2.0em; display: block; background: gray url("../images/flecha_activa.png") no-repeat 3px;}
+.flecha li:hover{background: gray url("../images/flecha_inactiva.png") no-repeat 3px;}
+
+/*Estilos relacionados con la tabla*/
+
+#tabla {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+th{
+    border-style:solid;
+    background-color:#5d95e9;
+    color:#000000;
+    font-weight:bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align:center;
+}
+
+th:hover {
+    border-style:solid;
+    background-color: #b8dbf1;
+    transform: translate(2px, 2px);
+    transition: background-color 0.5s ease-in, transform 0.2s ease-in;
+}
+
+td{
+    border-style:solid;
+    background-color:#b8dbf1;
+    font-size: 18px; 
+    color:#000000;
+    text-align:center;
+}
+
+td:hover{
+    border-style:solid;
+    background-color: #5d95e9;
+    transform: translate(2px, 2px);
+    transition: background-color 0.5s ease-in, transform 0.2s ease-in;
+}
+
+.seccion4{
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
