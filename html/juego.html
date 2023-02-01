@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,89 @@
     <title>Juegos</title>
     <link rel="stylesheet" href="../css/juego.css">
 </head>
+
 <body>
-    
+    <header>
+        <section>
+
+            <img class="img1" src="../images/juego.png" alt="Imagen Frameworks" />
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Menú</a></li>
+                    <li><a href="jQuery.html">JQuery</a></li>
+                    <li><a href="frame.html">Frameworks</a></li>
+                    <li><a href="boots.html">Bootstrap</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <div class="cuerpo">
+        <h1>TRES EN RALLA</h1>
+        <table>
+            <table width="200" border="">
+                <tbody>
+                    <div>
+                        <tr>
+                            <td id="c1" onClick="ff('c1')">&nbsp;</td>
+                            <td id="c2" onClick="ff('c2')">&nbsp;</td>
+                            <td id="c3" onClick="ff('c3')">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td id="t1" onClick="ff('t1')">&nbsp;</td>
+                            <td id="t2" onClick="ff('t2')">&nbsp;</td>
+                            <td id="t3" onClick="ff('t3')">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td id="y1" onClick="ff('y1')">&nbsp;</td>
+                            <td id="y2" onClick="ff('y2')">&nbsp;</td>
+                            <td id="y3" onClick="ff('y3')">&nbsp;</td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            Creadores: <a target="_blank" href="https://github.com/AlexCaro02/Practica2">Alejandro Caro y Samuel Solá
+            </a>
+        </div>
+    </footer>
 </body>
+<script>
+    function ff(dato) {
+        var el = document.getElementById(dato);
+
+        if (el.innerHTML == "X") {
+            el.innerHTML = "O";
+            el.className = "creu";
+        } else {
+            if (el.innerHTML == "O") {
+                el.innerHTML = "";
+                el.className = "td";
+            } else {
+                el.innerHTML = "X";
+                el.className = "rodona";
+            }
+        }
+    }
+
+    var turno = 0;
+    function ff(dato) {
+        var el = document.getElementById(dato);
+        if (turno == 0) {
+            el.innerHTML = "O";
+            turno = 1;
+            el.className = "rodona";
+        } else {
+            if (turno == 1) {
+                el.innerHTML = "X";
+                turno = 0;
+                el.className = "creu";
+            }
+        }
+    }
+
+
+</script>
+
 </html>
